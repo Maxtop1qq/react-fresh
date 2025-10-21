@@ -1,0 +1,52 @@
+.aside {
+  background-image: url(../assets/img/Group.svg), url(../assets/img/Group1.svg);
+  background-position: left bottom 68px, right bottom;
+  background-repeat: no-repeat;
+}
+
+.aside__head {
+  font-family: "Onest";
+  font-weight: 500;
+  font-size: 74px;
+  line-height: 84%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--text-main);
+  margin-top: 80px;
+  margin-bottom: 52px;
+}
+.aside__wraps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 24px;
+  row-gap: 35px;
+  padding-bottom: 79px;
+}
+.aside__items {
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 0 20px 0 rgba(66, 74, 72, 0.05);
+  background: var(--text-tertiary);
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+.aside__items img {
+  width: 48px;
+  height: 48px;
+}
+.aside__title {
+  font-family: "Onest";
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--text-main);
+}
+.aside__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin-top: 6px;
+}

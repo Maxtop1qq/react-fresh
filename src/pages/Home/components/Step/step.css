@@ -1,0 +1,103 @@
+.stepsection {
+  background-image: url(/assets/img/big\ plate.png),
+    url(/assets/img/bignotebook.png), url(/assets/img/bg1.png);
+  background-repeat: no-repeat;
+  background-size: auto 614px, auto 719px, auto 1010px;
+  background-position: top 142px left, right bottom 39px, center;
+  padding-bottom: 80px;
+  padding-top: 64px;
+  overflow: hidden;
+}
+.stepsection .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 97px;
+  padding: 0px;
+}
+.stepsection__title {
+  font-family: "Onest";
+  font-weight: 500;
+  font-size: 74px;
+  line-height: 84%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--text-main);
+}
+.stepsection__steplist {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  counter-reset: steps 0;
+  flex-direction: column;
+  row-gap: 134px;
+  column-gap: 112px;
+  max-width: 792px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.step:nth-child(even) {
+  align-self: end;
+}
+.step::after {
+  content: "";
+  background-image: url(/assets/img/Line\ 265.svg);
+  width: 298px;
+  height: 94px;
+  position: absolute;
+  top: 100px;
+  right: -170px;
+  background-size: contain;
+}
+.steз:nth-child(odd) {
+  align-self: flex-start;
+}
+.step:nth-child(even)::after {
+  background-image: url(/assets/img/Line\ 266.svg);
+  right: 267px;
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.step {
+  position: relative;
+  counter-increment: steps 1;
+  border-radius: 100px;
+  padding: 4px 20px 4px 4px;
+  background: var(--surface-secondary);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.step__counter {
+  border-radius: 50px;
+  font-family: "Onest";
+  padding: 12px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 115%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--text-main);
+  box-shadow: 0 0 12px 0 rgba(76, 85, 82, 0.16);
+  background: var(--text-tertiary);
+  width: 70px;
+  height: 70px;
+}
+.step__counter::after {
+  content: counter(steps);
+}
+.step__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  max-width: 240px;
+}
